@@ -1,16 +1,16 @@
-# backgroundserviceflutter
+# foregroundserviceflutter
 
-A new Flutter application.
+Create a service for playing music by giving the possibility to the user to pause or launch it.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+It is a service that must not die even in the event of a memory shortage.
+That is to say, it is considered by the system as ultra important for
+the user. In this case, it is mandatory to associate a notification to the
+service.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+• It is good practice that as soon as a service is performed, even for
+services that are not foreground, we give the user the possibility
+to stop it itself by displaying a notification (when the activity is no longer
+visible).
